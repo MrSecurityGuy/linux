@@ -264,7 +264,7 @@ static bool nft_payload_offload_mask(struct nft_offload_reg *reg,
 		return false;
 	}
 
-	memset(&mask, 0xff, field_len);
+	memset(&mask, 0xff, priv_len);
 	remainder = priv_len % sizeof(u32);
 	if (remainder) {
 		k = priv_len / sizeof(u32);
